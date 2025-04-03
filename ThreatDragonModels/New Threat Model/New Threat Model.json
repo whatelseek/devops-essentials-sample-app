@@ -16,7 +16,80 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.4.1",
-        "cells": [],
+        "cells": [
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "DMZ",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "DMZ"
+            ],
+            "id": "96285ba1-a116-4836-8fb2-85fb52228dc8",
+            "source": {
+              "x": 240,
+              "y": 10
+            },
+            "target": {
+              "x": 360,
+              "y": 570
+            },
+            "vertices": [
+              {
+                "x": 220,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "8a75ad32-ee61-4cc6-ba23-9a5307fe2caa",
+            "source": {
+              "x": 440,
+              "y": 580
+            },
+            "target": {
+              "x": 870,
+              "y": 570
+            },
+            "vertices": [
+              {
+                "x": 470,
+                "y": 450
+              },
+              {
+                "x": 540,
+                "y": 360
+              },
+              {
+                "x": 790,
+                "y": 360
+              }
+            ]
+          }
+        ],
         "description": "test"
       }
     ],
