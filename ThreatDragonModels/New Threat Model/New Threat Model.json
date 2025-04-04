@@ -517,16 +517,19 @@
                 "text": "S3"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -610,20 +613,46 @@
               ]
             },
             "id": "f86857d9-3993-4f1d-9bd4-929669cac999",
-            "zIndex": 11,
             "data": {
               "type": "tm.Store",
               "name": "S3",
               "description": "Stores data from RAG",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": true,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d4531afc-a807-42e5-8a6e-a69ee00892f2",
+                  "title": "Data theft",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "An attacker may compromise the credentials used in the backend and leverage them to steal sensitive information.",
+                  "mitigation": "Least privilege\nSecrets management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -640,16 +669,19 @@
                 "text": "PostgresSQL"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -733,20 +765,39 @@
               ]
             },
             "id": "65e70eea-9b1c-44a5-be45-09b6f4f0b721",
-            "zIndex": 12,
             "data": {
               "type": "tm.Store",
               "name": "PostgresSQL",
               "description": "Stores chat history",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": true,
-              "threats": []
+              "threats": [
+                {
+                  "id": "8957bc38-5b0e-438b-8de4-bfbd6a311b54",
+                  "title": "Data theft",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "An attacker may compromise the credentials used in the backend and leverage them to steal sensitive information.",
+                  "mitigation": "Least privilege\nSecrets management",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -763,13 +814,14 @@
                 "text": "Nginx"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -853,19 +905,40 @@
               ]
             },
             "id": "1df37a94-0696-4c21-af63-91fec8a6e7c9",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Nginx",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "70be9b00-d836-48c0-8f8a-d6717e6d90d9",
+                  "title": "HTTP Smuggling",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "The HTTP Request Smuggling attack explores an incomplete parsing of the submitted data done by an intermediary HTTP system working as a proxy. HTTP Request Smuggling consists of sending a specially formatted HTTP request that will be parsed in a different way by the proxy system and by the final system, so the attacker could smuggle a request to one system without the other being aware of it. This attack makes it possible to exploit other attacks, like Cache Poisoning, Session Hijacking, Cross-site Scripting (XSS) and most importantly, the ability to bypass web application firewall protection.",
+                  "mitigation": "Do not allow both Content-Length and Transfer-Encoding\nUse HTTP/2 instead of HTTP/1.1\nSet proxy_request_buffering on",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -884,11 +957,12 @@
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
-                "strokeDasharray": null
+                "strokeDasharray": "4 3"
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -972,12 +1046,11 @@
               ]
             },
             "id": "4d4c6273-2acb-4896-9b37-440fee3b0850",
-            "zIndex": 14,
             "data": {
               "type": "tm.Process",
               "name": "HAProxy",
               "description": "",
-              "outOfScope": false,
+              "outOfScope": true,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "handlesCardPayment": false,
@@ -1008,6 +1081,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1091,7 +1165,6 @@
               ]
             },
             "id": "60579222-e004-45db-9a5a-9fa3b145b318",
-            "zIndex": 15,
             "data": {
               "type": "tm.Process",
               "name": "ML",
@@ -1149,6 +1222,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 16,
             "ports": {
               "groups": {
                 "top": {
@@ -1232,7 +1306,6 @@
               ]
             },
             "id": "025f08be-b02a-4bff-be1a-f7dbbeabff22",
-            "zIndex": 16,
             "data": {
               "type": "tm.Actor",
               "name": "Browser",
@@ -1265,6 +1338,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 17,
             "ports": {
               "groups": {
                 "top": {
@@ -1348,7 +1422,6 @@
               ]
             },
             "id": "29cbfe7f-3ff8-473b-bf16-5a4c8466c5fa",
-            "zIndex": 17,
             "data": {
               "type": "tm.Process",
               "name": "API",
@@ -1379,11 +1452,12 @@
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
-                "strokeDasharray": null
+                "strokeDasharray": "4 3"
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 18,
             "ports": {
               "groups": {
                 "top": {
@@ -1467,12 +1541,11 @@
               ]
             },
             "id": "de2ce787-5f54-4b06-b014-c96c623695db",
-            "zIndex": 18,
             "data": {
               "type": "tm.Process",
               "name": "HAProxy",
               "description": "",
-              "outOfScope": false,
+              "outOfScope": true,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "handlesCardPayment": false,
@@ -1500,6 +1573,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 19,
             "ports": {
               "groups": {
                 "top": {
@@ -1583,7 +1657,6 @@
               ]
             },
             "id": "30bbfda0-bea1-49f5-80be-647448d8a5ee",
-            "zIndex": 19,
             "data": {
               "type": "tm.Actor",
               "name": "Actor",
@@ -1601,6 +1674,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 6
   }
 }
