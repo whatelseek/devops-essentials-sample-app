@@ -176,12 +176,6 @@
               "cell": "4d4c6273-2acb-4896-9b37-440fee3b0850",
               "port": "9f9a0b99-236a-469b-bedc-c60a31fbfd18"
             },
-            "vertices": [
-              {
-                "x": 190,
-                "y": 140
-              }
-            ],
             "tools": {
               "items": [
                 "boundary",
@@ -191,51 +185,13 @@
                 "target-arrowhead"
               ],
               "name": null
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
+            },
+            "vertices": [
+              {
+                "x": 190,
+                "y": 140
               }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "20fd9b66-71c9-472a-bfcc-6aeba541389c",
-            "source": {
-              "x": 300,
-              "y": 168
-            },
-            "target": {
-              "cell": "1df37a94-0696-4c21-af63-91fec8a6e7c9",
-              "port": "9f9a0b99-236a-469b-bedc-c60a31fbfd18"
-            }
+            ]
           },
           {
             "shape": "flow",
@@ -411,7 +367,13 @@
             "target": {
               "cell": "30bbfda0-bea1-49f5-80be-647448d8a5ee",
               "port": "7d658531-3ae4-422e-825c-004f37333f7c"
-            }
+            },
+            "vertices": [
+              {
+                "x": 210,
+                "y": 470
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -457,6 +419,10 @@
               "port": "b824b041-9f60-4b75-a064-8da528c69737"
             },
             "vertices": [
+              {
+                "x": 590,
+                "y": 300
+              },
               {
                 "x": 570,
                 "y": 440
@@ -510,6 +476,56 @@
               {
                 "x": 740,
                 "y": 270
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS",
+              "description": "Load balancer (sticky sessions)",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "HTTPS"
+            ],
+            "id": "20fd9b66-71c9-472a-bfcc-6aeba541389c",
+            "source": {
+              "x": 300,
+              "y": 168
+            },
+            "target": {
+              "cell": "1df37a94-0696-4c21-af63-91fec8a6e7c9",
+              "port": "9f9a0b99-236a-469b-bedc-c60a31fbfd18"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 168
               }
             ]
           },
@@ -656,13 +672,6 @@
                 "informationDisclosure": 3,
                 "denialOfService": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
