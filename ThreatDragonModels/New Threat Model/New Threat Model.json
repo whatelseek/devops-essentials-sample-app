@@ -153,8 +153,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
+              "name": "HTTPS",
+              "description": "User authenticates to platform, using login, password and 2FA",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
@@ -165,7 +165,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "HTTPS"
             ],
             "id": "bc5d88a3-948d-449f-a13c-81b449cc172c",
             "source": {
@@ -181,7 +181,17 @@
                 "x": 190,
                 "y": 140
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
