@@ -247,56 +247,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "00da48ff-e59a-4637-8134-276c3f8c4a69",
-            "source": {
-              "x": 590,
-              "y": 200
-            },
-            "target": {
-              "cell": "29cbfe7f-3ff8-473b-bf16-5a4c8466c5fa",
-              "port": "f1810949-5d39-44bf-9ec2-3d0b746d33ae"
-            },
-            "vertices": [
-              {
-                "x": 490,
-                "y": 290
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "HTTPS",
               "description": "Load balancer (sticky sessions)",
               "outOfScope": false,
@@ -326,145 +276,6 @@
                 "y": 168
               }
             ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "5da7bb0c-5780-443c-b477-4d775ed35696",
-            "source": {
-              "x": 590,
-              "y": 200
-            },
-            "target": {
-              "cell": "f86857d9-3993-4f1d-9bd4-929669cac999",
-              "port": "b824b041-9f60-4b75-a064-8da528c69737"
-            },
-            "vertices": [
-              {
-                "x": 590,
-                "y": 390
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "a2fe075f-5453-4ae1-9810-cf1b6bddd7a1",
-            "source": {
-              "cell": "29cbfe7f-3ff8-473b-bf16-5a4c8466c5fa",
-              "port": "f1810949-5d39-44bf-9ec2-3d0b746d33ae"
-            },
-            "target": {
-              "x": 490,
-              "y": 310
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "9b4d996c-a32f-481e-a62b-8121eec11dec",
-            "source": {
-              "x": 430,
-              "y": 310
-            },
-            "target": {
-              "cell": "de2ce787-5f54-4b06-b014-c96c623695db",
-              "port": "f1810949-5d39-44bf-9ec2-3d0b746d33ae"
-            }
           },
           {
             "shape": "flow",
@@ -552,8 +363,8 @@
             ],
             "id": "f8255e74-5d40-4145-9a80-9fb0e9b2accb",
             "source": {
-              "x": 587,
-              "y": 200
+              "cell": "60579222-e004-45db-9a5a-9fa3b145b318",
+              "port": "fc2a34fb-0b4d-4efc-8401-ea2f57a0a4e6"
             },
             "target": {
               "cell": "65e70eea-9b1c-44a5-be45-09b6f4f0b721",
@@ -561,10 +372,152 @@
             },
             "vertices": [
               {
+                "x": 650,
+                "y": 170
+              },
+              {
                 "x": 740,
                 "y": 270
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "5da7bb0c-5780-443c-b477-4d775ed35696",
+            "source": {
+              "cell": "60579222-e004-45db-9a5a-9fa3b145b318",
+              "port": "fc2a34fb-0b4d-4efc-8401-ea2f57a0a4e6"
+            },
+            "target": {
+              "cell": "f86857d9-3993-4f1d-9bd4-929669cac999",
+              "port": "b824b041-9f60-4b75-a064-8da528c69737"
+            },
+            "vertices": [
+              {
+                "x": 590,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "41491185-3a98-49df-bcb8-8a4e76a85523",
+            "source": {
+              "x": 620,
+              "y": 80
+            },
+            "target": {
+              "cell": "29cbfe7f-3ff8-473b-bf16-5a4c8466c5fa",
+              "port": "f1810949-5d39-44bf-9ec2-3d0b746d33ae"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "9b4d996c-a32f-481e-a62b-8121eec11dec",
+            "source": {
+              "cell": "29cbfe7f-3ff8-473b-bf16-5a4c8466c5fa",
+              "port": "fc2a34fb-0b4d-4efc-8401-ea2f57a0a4e6"
+            },
+            "target": {
+              "cell": "de2ce787-5f54-4b06-b014-c96c623695db",
+              "port": "f1810949-5d39-44bf-9ec2-3d0b746d33ae"
+            }
           },
           {
             "position": {
@@ -1118,8 +1071,8 @@
           },
           {
             "position": {
-              "x": 563,
-              "y": 140
+              "x": 620,
+              "y": 50
             },
             "size": {
               "width": 60,
@@ -1375,8 +1328,8 @@
           },
           {
             "position": {
-              "x": 430,
-              "y": 280
+              "x": 510,
+              "y": 150
             },
             "size": {
               "width": 60,
@@ -1622,7 +1575,7 @@
             },
             "attrs": {
               "text": {
-                "text": "AI vendors"
+                "text": "Data Sources"
               },
               "body": {
                 "stroke": "#333333",
@@ -1718,13 +1671,31 @@
             "id": "30bbfda0-bea1-49f5-80be-647448d8a5ee",
             "data": {
               "type": "tm.Actor",
-              "name": "AI vendors",
+              "name": "Data Sources",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "e3c73349-64ab-44ba-b2bb-414c359d4a0c",
+                  "title": "Model Poisoning",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "description": "Data poisoning occurs when pre-training, fine-tuning, or embedding data is manipulated to\nintroduce vulnerabilities, backdoors, or biases. This manipulation can compromise model\nsecurity, performance, or ethical behavior, leading to harmful outputs or impaired capabilities.\nCommon risks include degraded model performance, biased or toxic content, and exploitation of\ndownstream systems.",
+                  "mitigation": "1. Track data origins and transformations using tools like OWASP CycloneDX or ML-BOM. Verify\ndata legitimacy during all model development stages.\n2. Vet data vendors rigorously, and validate model outputs against trusted sources to detect\nsigns of poisoning.\n3. Implement strict sandboxing to limit model exposure to unverified data sources. Use\nanomaly detection techniques to filter out adversarial data.\n4. Tailor models for different use cases by using specific datasets for fine-tuning. This helps\nproduce more accurate outputs based on defined goals.\n5. Ensure sufficient infrastructure controls to prevent the model from accessing unintended\ndata sources.\n6. Use data version control (DVC) to track changes in datasets and detect manipulation.\nVersioning is crucial for maintaining model integrity.\n7. Store user-supplied information in a vector database, allowing adjustments without retraining\nthe entire model.\n8. Test model robustness with red team campaigns and adversarial techniques, such as\nfederated learning, to minimize the impact of data perturbations.\n9. Monitor training loss and analyze model behavior for signs of poisoning. Use thresholds to\ndetect anomalous outputs.\n10. During inference, integrate Retrieval-Augmented Generation (RAG) and grounding\ntechniques to reduce risks of hallucinations.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           }
         ],
@@ -1733,6 +1704,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 6
+    "threatTop": 7
   }
 }
