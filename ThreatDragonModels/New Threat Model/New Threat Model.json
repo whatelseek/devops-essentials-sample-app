@@ -176,16 +176,6 @@
               "cell": "4d4c6273-2acb-4896-9b37-440fee3b0850",
               "port": "9f9a0b99-236a-469b-bedc-c60a31fbfd18"
             },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            },
             "vertices": [
               {
                 "x": 190,
@@ -334,56 +324,6 @@
               {
                 "x": 340,
                 "y": 168
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "HTTPS",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "f8255e74-5d40-4145-9a80-9fb0e9b2accb",
-            "source": {
-              "x": 587,
-              "y": 200
-            },
-            "target": {
-              "cell": "65e70eea-9b1c-44a5-be45-09b6f4f0b721",
-              "port": "b824b041-9f60-4b75-a064-8da528c69737"
-            },
-            "vertices": [
-              {
-                "x": 740,
-                "y": 270
               }
             ]
           },
@@ -573,6 +513,56 @@
               {
                 "x": 210,
                 "y": 470
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "f8255e74-5d40-4145-9a80-9fb0e9b2accb",
+            "source": {
+              "x": 587,
+              "y": 200
+            },
+            "target": {
+              "cell": "65e70eea-9b1c-44a5-be45-09b6f4f0b721",
+              "port": "b824b041-9f60-4b75-a064-8da528c69737"
+            },
+            "vertices": [
+              {
+                "x": 740,
+                "y": 270
               }
             ]
           },
@@ -987,7 +977,7 @@
                   "id": "70be9b00-d836-48c0-8f8a-d6717e6d90d9",
                   "title": "HTTP Smuggling",
                   "status": "Open",
-                  "severity": "Medium",
+                  "severity": "Low",
                   "type": "Spoofing",
                   "description": "The HTTP Request Smuggling attack explores an incomplete parsing of the submitted data done by an intermediary HTTP system working as a proxy. HTTP Request Smuggling consists of sending a specially formatted HTTP request that will be parsed in a different way by the proxy system and by the final system, so the attacker could smuggle a request to one system without the other being aware of it. This attack makes it possible to exploit other attacks, like Cache Poisoning, Session Hijacking, Cross-site Scripting (XSS) and most importantly, the ability to bypass web application firewall protection.",
                   "mitigation": "Do not allow both Content-Length and Transfer-Encoding\nUse HTTP/2 instead of HTTP/1.1\nSet proxy_request_buffering on",
@@ -998,7 +988,7 @@
                 }
               ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 3,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -1245,12 +1235,12 @@
               "threats": [
                 {
                   "id": "0f5b8070-b590-46b3-8099-5c5b162dca05",
-                  "title": "Expedition",
+                  "title": "Unbounded Consumption",
                   "status": "Open",
-                  "severity": "TBD",
-                  "type": "Tampering",
-                  "description": "See OWASP Automated Threat #6:\nUsing speed to violate explicit or implicit assumptions about the application’s normal use to achieve unfair individual gain",
-                  "mitigation": "Defences include providing enforcement of behavioral workflow and anti-automation",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Attacks designed to disrupt service, deplete the target's financial resources, or even steal\nintellectual property by cloning a model’s behavior all depend on a common class of security\nvulnerability in order to succeed. Unbounded Consumption occurs when a Large Language Model\n(LLM) application allows users to conduct excessive and uncontrolled inferences, leading to risks\nsuch as denial of service (DoS), economic losses, model theft, and service degradation. The high\ncomputational demands of LLMs, especially in cloud environments, make them vulnerable to\nresource exploitation and unauthorized usage.",
+                  "mitigation": "1. Input Validation\nImplement strict input validation to ensure that inputs do not exceed reasonable size limits.\n2. Limit Exposure of Logits and Logprobs\nRestrict or obfuscate the exposure of `logit_bias` and `logprobs` in API responses. Provide\nonly the necessary information without revealing detailed probabilities.\n3. Rate Limiting\nApply rate limiting and user quotas to restrict the number of requests a single source entity\ncan make in a given time period.\n4. Resource Allocation Management\nMonitor and manage resource allocation dynamically to prevent any single user or request from consuming excessive resources.\n5. Timeouts and Throttling\nSet timeouts and throttle processing for resource-intensive operations to prevent prolonged resource consumption.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 1,
@@ -1262,7 +1252,7 @@
                 "tampering": 1,
                 "repudiation": 0,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
+                "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
             }
@@ -1278,7 +1268,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Browser"
+                "text": "User"
               },
               "body": {
                 "stroke": "#333333",
@@ -1374,7 +1364,7 @@
             "id": "025f08be-b02a-4bff-be1a-f7dbbeabff22",
             "data": {
               "type": "tm.Actor",
-              "name": "Browser",
+              "name": "User",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -1631,6 +1621,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "AI vendors"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -1725,7 +1718,7 @@
             "id": "30bbfda0-bea1-49f5-80be-647448d8a5ee",
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "AI vendors",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
