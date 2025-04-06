@@ -1221,13 +1221,6 @@
                 "denialOfService": 1,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1343,7 +1336,32 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "54f11a6d-e0e7-4e9c-a0dd-d652294c4732",
+                  "title": "Identity theaft",
+                  "status": "Mitigated",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Using Social engineering an attacker theft users credentials and use it for data leakage",
+                  "mitigation": "Awareness program\n2FA",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -1724,6 +1742,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 8
+    "threatTop": 9
   }
 }
